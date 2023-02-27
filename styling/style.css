@@ -4,6 +4,7 @@
     --green: #97FFBB; 
     --blue: #64F8FF;
 
+    --primary : #262626;
     --secondary: #dca6a1;
     --dark-color: #363636;
     --light-color: #f7f7f7;
@@ -158,7 +159,7 @@ main {
 section {
     min-height: 100vh;
 }
-
+/* Page 1 */
 .page-1 {
     display : flex;
     justify-content: space-between;
@@ -184,9 +185,7 @@ section {
 
 .content-1 {
     flex-basis: 40%;
-    /* margin-left: 100px; */
     margin-top: 50px;
-    /* background-color: #FFF6BB; */
     text-align: right;
     padding-right: 10%;
 }
@@ -195,8 +194,10 @@ section {
     flex-basis: 60%;
     position: relative;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
+
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
     background-color: var(--light-color);
     min-height: 100vh;
 }
@@ -206,10 +207,20 @@ section {
     width: 70%;
 }
 
-.page2 {
-    background-color: #97FFBB;
+.content-2 {
+    /* margin-right: 10px; */
+    padding-right: 10%;
+    margin-left: 30%;
+    margin-top: 30px;
+    text-align: justify;
+    
 }
 
+.content-2 .p{
+    text-justify: inter-word;
+}
+
+/* Talitha front */
 .tal {
     z-index: 100;
 }
@@ -221,11 +232,40 @@ section {
 
 .center {
     position: absolute;
-    top: 70%;
+    top: 65%;
     left: 40%;
     transform: translate(-50%,-50%);
     object-fit: cover;
 }
+
+/* Quote Box */
+.quote-box {
+    position: absolute;
+    /* border: solid black; */
+    z-index: 150;
+    top: 85%;
+    min-height: 300px;
+    min-width: 100%;
+    background-color: var(--primary);
+
+    display: flex;
+    justify-content: center;
+}
+
+.quote {
+    margin-top: 60px;
+    margin-left: 8%;
+    margin-right: 8%;
+    font-weight: 100;
+    color: var(--light-color);
+    text-align: center;
+}
+
+/* Page 2 */
+.page2 {
+    background-color: #97FFBB;
+}
+
 
 /* Responsive */
 
@@ -280,6 +320,10 @@ section {
 }
 
 @media (max-width: 540px){
+    h1{
+        font-size: 40px;
+        line-height: 42px;
+    }
     h2 {
         font-size: 22px;
     }
