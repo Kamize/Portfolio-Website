@@ -51,7 +51,7 @@ h3 {
 p {
     font-family: 'Helvetica';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     line-height: 16px;
 
@@ -77,7 +77,7 @@ a {
 
 body {
     background:white;
-    height: 2000px;
+    /* height: 2000px; */
 }
 
 /* Navigation */
@@ -145,7 +145,7 @@ nav .nav-items li a.active {
 /* Main */
 
 main {
-    padding-top: 150px;
+    /* padding-top: 100px; */
     min-height: 100vh;
     width: 100%;
     /* padding-left: 8%; */
@@ -185,7 +185,7 @@ section {
 
 .content-1 {
     flex-basis: 40%;
-    margin-top: 50px;
+    margin-top: 150px;
     text-align: right;
     padding-right: 10%;
 }
@@ -236,6 +236,7 @@ section {
     left: 40%;
     transform: translate(-50%,-50%);
     object-fit: cover;
+    height: 60%;
 }
 
 /* Quote Box */
@@ -244,7 +245,7 @@ section {
     /* border: solid black; */
     z-index: 150;
     top: 85%;
-    min-height: 300px;
+    min-height: 180px;
     min-width: 100%;
     background-color: var(--primary);
 
@@ -262,10 +263,56 @@ section {
 }
 
 /* Page 2 */
-.page2 {
-    background-color: #97FFBB;
+.page-2 {
+    background-color:var(--light-color);
+    display: flex;
+    padding-left: 8%;
+    padding-right: 8%;
+    flex-direction: column;
 }
 
+.subtitle {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
+    /* border: solid black; */
+    justify-content: center;
+    align-content: center;
+    margin-top: 10%;
+    gap: 3em;
+}
+
+.project-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    border: solid var(--dark-color);
+    background-color: var(--dark-color);
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+    flex-basis: 300px;
+}
+
+.project-box .project-title {
+    color: var(--light-color);
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    
+}
+.project-box .project-img {
+    width: 100%;
+    object-fit: cover;
+}
 
 /* Responsive */
 
@@ -280,10 +327,16 @@ section {
 @media (max-width: 1320px) {
     header {
         padding: 0 50px;
+        height: 100px;
     }
     h1 {
         font-size: 50px;
         line-height: 52px;
+    }
+    
+    .col-2 .square-tal {
+        margin-top: 150px;
+        width: 70%;
     }
 }
 
@@ -317,6 +370,9 @@ section {
     .col-2 .square-tal {
         margin-top: 150px;
     }
+    .subtitle {
+        margin-top: 50px;
+    }
 }
 
 @media (max-width: 540px){
@@ -326,5 +382,16 @@ section {
     }
     h2 {
         font-size: 22px;
+    }
+    h3 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .project-box{
+        max-height: 500px;
+        flex-basis: 500px;
     }
 }
